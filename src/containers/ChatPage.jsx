@@ -3,16 +3,19 @@ import { TextEditor } from "../components/TextEditor/TextEditor";
 import { Button } from "../components/Button/Button";
 import "./chatPage.css";
 import { Bubble } from "../components/Bubble/Bubble";
-import { getCurrentTimeStamp, getFormattedTime } from "../utils/timestamp-util";
+import { useDispatch, useSelector } from "react-redux";
+import {postMessage} from "../redux/actions/chat";
 
 export const ChatPage = () => {
   const [message, setMessage] = useState(null);
   const [messages, setMessages] = useState([]);
+  const dispatch = useDispatch();
 
   const enter = () => {
     let cloneMessages = [...messages];
-    const userName = localStorage.getItem('chat_user');
+    const userName = localStorage.getItem("chat_user");
     cloneMessages.push({ timeStamp: new Date(), userName, message });
+    dispatch(postMessage(cloneMessages));
     setMessages(cloneMessages);
   };
   return (

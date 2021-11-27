@@ -1,13 +1,17 @@
 import React from "react";
 import PropTypes from "prop-types";
 import "./Bubble.css";
-import { getFormattedTime } from "../../utils/timestamp-util";
+import { getFormattedTime } from "../../utils/timestamp-utils";
 
 export const Bubble = (props) => {
   const { message, timeStamp, userName, userType, className } = props;
-  const currentUser = localStorage.getItem('chat_user')
+  const currentUser = localStorage.getItem("chat_user");
   return (
-    <div className={`bubble ${currentUser === userName ? 'self ': 'other '} ${className}`}>
+    <div
+      className={`bubble ${
+        currentUser === userName ? "self " : "other "
+      } ${className}`}
+    >
       <div>{userName}</div>
       <p>{message}</p>
       <div className="timestamp">{getFormattedTime(timeStamp)}</div>

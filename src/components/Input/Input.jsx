@@ -6,7 +6,7 @@ export const Input = (props) => {
   const { handleChange, message, className } = props;
   return (
     <input
-        type="text"
+      type="text"
       className={`textarea ${className}`}
       value={message}
       onChange={(event) => handleChange(event.target.value)}

@@ -1,0 +1,22 @@
+.bubble {
+  padding: 1%;
+  border-radius: 4px;
+  width: 52vw;
+  margin-bottom: 20px;
+  float: right;
+}
+
+.bubble.self {
+  background: #ffffff;
+  border: solid 1px #d4d8dd;
+  float: right;
+}
+
+.bubble.other {
+  background: #fcf7c2;
+  float: left;
+}
+
+.bubble .timestamp {
+  font-size: 12px;
+}

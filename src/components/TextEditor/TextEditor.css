@@ -1,0 +1,15 @@
+textarea.textarea {
+  border: solid 2px transparent;
+  border-radius: 3px;
+  outline: none;
+  box-shadow: none;
+  resize: none;
+  height: 50px;
+  display:inline-block;
+  vertical-align:middle;
+}
+
+textarea.textarea:focus {
+  border: solid 2px #2c74a4;
+  outline: none;
+}

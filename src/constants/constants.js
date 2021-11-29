@@ -14,3 +14,8 @@ export const MONTHS = [
   "Nov",
   "Dec",
 ];
+
+//
+export const CHATS = "CHATS";
+export const CHATS_LOADING = "CHATS_LOADING";
+export const PAGE_LENGTH = 10;

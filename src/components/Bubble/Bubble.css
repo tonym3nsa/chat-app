@@ -1,22 +1,44 @@
 .bubble {
-  padding: 1%;
+  padding: 10px;
   border-radius: 4px;
   width: 52vw;
   margin-bottom: 20px;
   float: right;
+  border: solid 1px #d4d8dd;
+  cursor: pointer;
+}
+
+.bubble p {
+  margin: 0;
+  font-size: 16px;
 }
 
 .bubble.self {
   background: #ffffff;
-  border: solid 1px #d4d8dd;
   float: right;
 }
+
+.bubble:hover {
+  filter: saturate(2);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+}
+
 
 .bubble.other {
   background: #fcf7c2;
   float: left;
 }
 
-.bubble .timestamp {
-  font-size: 12px;
+.bubble .timestamp, .bubble .author {
+  font-size: 13px;
+  color: #BFC2C5;
 }
+
+.bubble .timestamp {
+  text-align: right;
+}
+
+.bubble .author {
+
+}
+

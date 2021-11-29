@@ -3,19 +3,23 @@ import PropTypes from "prop-types";
 import "./Input.css";
 
 export const Input = (props) => {
-  const { handleChange, message, className } = props;
+  const { handleChange, message, className, name, placeholder } = props;
   return (
     <input
       type="text"
-      className={`textarea ${className}`}
+      className={`input ${className}`}
       value={message}
-      onChange={(event) => handleChange(event.target.value)}
+      name={name}
+      // onChange={(event) => handleChange(event.target.value)}
+      placeholder={placeholder}
     />
   );
 };
 
 Input.propTypes = {
-  handleChange: PropTypes.func.isRequired,
+  // handleChange: PropTypes.func.isRequired,
   message: PropTypes.string,
   className: PropTypes.string,
+  placeholder: PropTypes.string,
+  name: PropTypes.string.isRequired,
 };

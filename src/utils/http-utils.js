@@ -12,3 +12,14 @@ export const post = (payload) => {
       return error;
     });
 };
+
+export const get = () => {
+  return axios
+    .get(`${apiURL}&limit=10`)
+    .then((response) => {
+      return response;
+    })
+    .catch((error) => {
+      return error;
+    });
+};

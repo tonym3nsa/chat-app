@@ -1,15 +1,18 @@
-textarea.textarea {
+input.input {
   border: solid 2px transparent;
   border-radius: 3px;
   outline: none;
   box-shadow: none;
   resize: none;
-  height: 50px;
   display:inline-block;
   vertical-align:middle;
+  line-height: 16px;
+  padding: 10px;
+  box-sizing:border-box
 }
 
-textarea.textarea:focus {
+input.input:focus {
   border: solid 2px #2c74a4;
   outline: none;
+
 }

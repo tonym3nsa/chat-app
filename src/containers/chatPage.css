@@ -1,20 +1,26 @@
-.messaging_section {
+.messaging-section {
   position: fixed;
   bottom: 0;
   left: 0;
   background: #3998d5;
   width: 100%;
-  padding: 1%;
+  padding: 15px 0;
+
+;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: 8fr 2fr;
+  grid-template-columns: 8fr 1fr;
+width: 80%;
+  margin: 0 auto;
 }
 
 .chat-area {
   position: relative;
-  height: 90vh;
+  /*height: 90vh;*/
   overflow-y: auto;
-  width: 100%;
+  width: 80%;
+  display: block;
+  margin: 0 auto;
 }

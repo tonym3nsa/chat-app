@@ -4,17 +4,19 @@ import "./Bubble.css";
 import { getFormattedTime } from "../../utils/timestamp-utils";
 
 export const Bubble = (props) => {
-  const { message, timeStamp, userName, userType, className } = props;
+  const { message, timeStamp, author, userType, className } = props;
   const currentUser = localStorage.getItem("chat_user");
   return (
     <div
       className={`bubble ${
-        currentUser === userName ? "self " : "other "
+        currentUser === author ? "self " : "other "
       } ${className}`}
     >
-      <div>{userName}</div>
+      <div className="author">{author}</div>
       <p>{message}</p>
-      <div className="timestamp">{getFormattedTime(timeStamp)}</div>
+      <div className="timestamp">
+        {timeStamp && getFormattedTime(timeStamp)}
+      </div>
     </div>
   );
 };
@@ -23,6 +25,6 @@ Bubble.propTypes = {
   message: PropTypes.string.isRequired,
   className: PropTypes.string,
   timeStamp: PropTypes.number.isRequired,
-  userName: PropTypes.string.isRequired,
+  author: PropTypes.string.isRequired,
   userType: PropTypes.oneOf(["self", "other"]),
 };

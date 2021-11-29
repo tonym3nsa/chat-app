@@ -5,23 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="df6e5e5b-8104-4904-818d-f43555d47e24" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/redux/actions/chat.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/actions/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/reducers/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/store/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/http-utils.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/reducers/chat.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Bubble/Bubble.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Bubble/Bubble.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Bubble/Bubble.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Bubble/Bubble.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Button/Button.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button/Button.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Button/Button.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button/Button.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Input/Input.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Input/Input.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Input/Input.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Input/Input.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constants/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/constants.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/ChatPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/ChatPage.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/LoginPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/LoginPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/timestamp-util.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/timestamp-utils.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/chatPage.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/chatPage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/actions/chat.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/actions/chat.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/http-utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/http-utils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/timestamp-utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/timestamp-utils.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +82,8 @@
       <workItem from="1637875422544" duration="19000" />
       <workItem from="1637875837866" duration="303000" />
       <workItem from="1637876481873" duration="40000" />
-      <workItem from="1637876673471" duration="24237000" />
+      <workItem from="1637876673471" duration="33896000" />
+      <workItem from="1638207981936" duration="7199000" />
     </task>
     <servers />
   </component>
@@ -98,6 +100,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

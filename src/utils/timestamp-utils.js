@@ -1,10 +1,7 @@
 import { MONTHS } from "../constants/constants";
 
-export const getCurrentTimeStamp = () => {
-  return new Date();
-};
-
-export const getFormattedTime = (date) => {
+export const getFormattedTime = (timestamp) => {
+  const date = new Date(timestamp);
   const day = date.getDate();
   const month = date.getMonth();
   const year = date.getFullYear();

@@ -1,28 +1,25 @@
 import React, { useState, useEffect, useRef } from "react";
-import { TextEditor } from "../components/TextEditor/TextEditor";
-import { Button } from "../components/Button/Button";
-import "./chatPage.css";
-import { Bubble } from "../components/Bubble/Bubble";
 import { useDispatch, useSelector } from "react-redux";
-import { getMessages, postMessage } from "../redux/actions/chat";
-import { Input } from "../components/Input/Input";
+import { Button } from "../../components/Button/Button";
+import { Bubble } from "../../components/Bubble/Bubble";
+import { Input } from "../../components/Input/Input";
+import { EmptyState } from "../../components/EmptyState/EmptyState";
+import { getMessages, postMessage } from "../../redux/actions/chat";
+import { AUTHOR } from "../../constants/constants";
+import "./chatPage.css";
 
 export const ChatPage = () => {
-  const [message, setMessage] = useState(null);
+  const { chats } = useSelector((state) => state.chatReducer);
   const [messages, setMessages] = useState([]);
   const dispatch = useDispatch();
-  const { chats } = useSelector((state) => state.chatReducer);
   const messagesEndRef = useRef(null);
-  const [pagination, setPagination] = useState(10);
 
   useEffect(() => {
-    window.scrollTo(0, document.body.scrollHeight);
-
-    dispatch(getMessages(pagination));
+    dispatch(getMessages());
+    // eslint-disable-next-line
   }, []);
 
   useEffect(() => {
-    console.log('new chat', new Date());
     if (chats) {
       setMessages(chats);
     }
@@ -34,15 +31,17 @@ export const ChatPage = () => {
   };
 
   useEffect(() => {
-    scrollToBottom();
+    if (messages.length > 0) {
+      scrollToBottom();
+    }
   }, [messages]);
 
   const onSubmit = (event) => {
     event.preventDefault();
     const message = event.target.chat.value;
     let cloneMessages = [...messages];
-    const author = localStorage.getItem("chat_user");
-    cloneMessages.push({ timeStamp: new Date(), author, message });
+    const author = localStorage.getItem(AUTHOR);
+    cloneMessages.push({ timestamp: new Date(), author, message });
     setMessages(cloneMessages);
     dispatch(postMessage({ timeStamp: new Date(), author, message }));
     event.target.reset();
@@ -56,12 +55,12 @@ export const ChatPage = () => {
             <Bubble
               key={msg.timestamp}
               message={msg.message}
-              timeStamp={msg.timestamp}
+              timestamp={msg.timestamp}
               author={msg.author}
             />
           ))
         ) : (
-          <h1>so much darkness</h1>
+          <EmptyState />
         )}
       </div>
       <div ref={messagesEndRef} />
@@ -72,11 +71,10 @@ export const ChatPage = () => {
               <Input
                 name="chat"
                 placeholder="Enter text to send"
-                message={message}
                 className="full-width"
               />
             </div>
-            <div>
+            <div className="text-align-right">
               <Button type="submit">Send</Button>
             </div>
           </div>

@@ -1,8 +1,9 @@
-import { CHATS, PAGE_LENGTH } from "../../constants/constants";
+import { CHATS } from "../../constants/constants";
 import axios from "axios";
 const apiURL = process.env.REACT_APP_API_ENDPOINT;
+
 export const postMessage = (payload) => {
-  return (dispatch) => {
+  return () => {
     return axios
       .post(apiURL, payload)
       .then((response) => {
@@ -14,7 +15,7 @@ export const postMessage = (payload) => {
   };
 };
 
-export const getMessages = (limit = PAGE_LENGTH) => {
+export const getMessages = () => {
   return (dispatch) => {
     return axios
       .get(`${apiURL}`)
@@ -26,5 +27,3 @@ export const getMessages = (limit = PAGE_LENGTH) => {
       });
   };
 };
-
-export default { postMessage };

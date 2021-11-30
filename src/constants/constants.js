@@ -1,5 +1,8 @@
-export const LOGIN = "LOGIN_PAGE";
-export const CHAT = "CHAT_PAGE";
+// ROUTES CONSTANTS
+export const LOGIN_PAGE = "/";
+export const CHAT_PAGE = "/chat";
+
+// DATE-TIME CONSTANTS
 export const MONTHS = [
   "Jan",
   "Feb",
@@ -15,7 +18,7 @@ export const MONTHS = [
   "Dec",
 ];
 
-//
+// MISCELLANEOUS CONSTANTS
 export const CHATS = "CHATS";
-export const CHATS_LOADING = "CHATS_LOADING";
-export const PAGE_LENGTH = 10;
+export const AUTHOR = "author";
+export const LOCAL_CHATS = "local_chats";

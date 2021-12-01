@@ -22,3 +22,4 @@ export const MONTHS = [
 export const CHATS = "CHATS";
 export const AUTHOR = "author";
 export const LOCAL_CHATS = "local_chats";
+export const INTERVAL = 5000;

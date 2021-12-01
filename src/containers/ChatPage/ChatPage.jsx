@@ -5,7 +5,7 @@ import { Bubble } from "../../components/Bubble/Bubble";
 import { Input } from "../../components/Input/Input";
 import { EmptyState } from "../../components/EmptyState/EmptyState";
 import { getMessages, postMessage } from "../../redux/actions/chat";
-import { AUTHOR } from "../../constants/constants";
+import { AUTHOR, INTERVAL } from "../../constants/constants";
 import "./chatPage.css";
 
 export const ChatPage = () => {
@@ -15,7 +15,9 @@ export const ChatPage = () => {
   const messagesEndRef = useRef(null);
 
   useEffect(() => {
-    dispatch(getMessages());
+    setInterval(function () {
+      dispatch(getMessages());
+    }, INTERVAL);
     // eslint-disable-next-line
   }, []);
 
@@ -50,18 +52,20 @@ export const ChatPage = () => {
   return (
     <React.Fragment>
       <div className="chat-area">
-        {messages.length > 0 ? (
-          messages?.map((msg) => (
-            <Bubble
-              key={msg.timestamp}
-              message={msg.message}
-              timestamp={msg.timestamp}
-              author={msg.author}
-            />
-          ))
-        ) : (
-          <EmptyState />
-        )}
+        <section role="list">
+          {messages.length > 0 ? (
+            messages?.map((msg) => (
+              <Bubble
+                key={msg.timestamp}
+                message={msg.message}
+                timestamp={msg.timestamp}
+                author={msg.author}
+              />
+            ))
+          ) : (
+            <EmptyState />
+          )}
+        </section>
       </div>
       <div ref={messagesEndRef} />
       <form onSubmit={onSubmit}>

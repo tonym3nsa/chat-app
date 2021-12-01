@@ -3,21 +3,22 @@ import PropTypes from "prop-types";
 import "./input.css";
 
 export const Input = (props) => {
-  const { message, className, name, placeholder } = props;
+  const { className, name, placeholder } = props;
+
   return (
     <input
       type="text"
       className={`input ${className}`}
-      value={message}
       name={name}
       placeholder={placeholder}
       data-test="input"
+      aria-label={name}
+      aria-required="true"
     />
   );
 };
 
 Input.propTypes = {
-  message: PropTypes.string,
   className: PropTypes.string,
   placeholder: PropTypes.string,
   name: PropTypes.string.isRequired,

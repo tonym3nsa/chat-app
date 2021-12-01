@@ -9,6 +9,7 @@ export const Bubble = (props) => {
   const currentUser = localStorage.getItem(AUTHOR);
   return (
     <div
+      role="listitem"
       className={`bubble ${
         currentUser === author ? "self " : "other "
       } ${className}`}
